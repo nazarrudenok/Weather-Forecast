@@ -1,0 +1,1 @@
+worker: python weatherbot3.py
