@@ -1,1 +1,1 @@
-worker: python weatherbot3.py
+worker: python WeatherForecast.py
