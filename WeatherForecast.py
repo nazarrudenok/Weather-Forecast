@@ -2,16 +2,8 @@ import telebot
 from telebot import types
 import requests
 from bs4 import BeautifulSoup
-from pyowm import OWM
-from pyowm.utils.config import get_default_config
 
 bot = telebot.TeleBot('5918833330:AAFb2nJUinsjWQqtY8AnI4SD2yY-_xWSQDE')
-owm = OWM('81f28410dced88a2b071ac219fcde6c5')
-
-owm = owm.weather_manager()
-
-config_dict = get_default_config()
-config_dict['language'] = 'ua'
 
 @bot.message_handler(commands = ['start'])
 def start(message):
@@ -103,5 +95,6 @@ def odesa(message):
 		tisk[4].text + ' ' + tisk_number[3].text + '\n' +
 		shv_vitru[6].text + ' ' + shv_vitru_number[4].text
 		)
+
 
 bot.polling(non_stop=True)
